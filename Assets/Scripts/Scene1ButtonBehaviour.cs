@@ -22,6 +22,6 @@ public class Scene1ButtonBehaviour : MonoBehaviour
 
     void TaskOnClick(){
         //resets the variable score from PlayerBehaviour.cs to 0 and loads the scene "s1assign1"
-        SceneManager.LoadScene("Scene 1");
+        SceneManager.LoadScene("Story1");
     }
 }

@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Navigation.unity
     guid: cbf693862a1f6498cafed075232f4277
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Story1.unity
     guid: ded10d27295a64963baa205ad54ef3e5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Story2.unity
     guid: e03835822802e4b419b42527111d6f89
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Story3.unity
     guid: 7a366ba6a8b8f45e3bcf47d61e98b4c1
   m_configObjects: {}
