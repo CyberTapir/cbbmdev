@@ -29,9 +29,9 @@ public class SpawnerBehaviour : MonoBehaviour
         //obScript.speed = Random.Range(10f, 15f);
 
         //random size set to between 0.1 and 0.2 (x axis)
-        float size = Random.Range(65f, 80f);
+        float size = Random.Range(1f, 1.5f);
         //random size2 set to between 0.2 and 0.5 (y axis)
-        float size2 = Random.Range(65f, 80f);
+        float size2 = Random.Range(1f, 1.5f);
         obstacle.transform.localScale = new Vector2(size, size2);
 
         //Create obstacle
