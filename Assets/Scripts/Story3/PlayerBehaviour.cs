@@ -22,13 +22,12 @@ using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    //sets the variables, score to 0, gameOver to false, and states the other variables
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
         //sets the Time to 1 second
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         //Increment score every 1 second
         //InvokeRepeating("IncrementScore", 1f, 1f);
     }
@@ -40,7 +39,6 @@ public class PlayerBehaviour : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(speed * h, 0);
         transform.Translate(movement * Time.deltaTime, Space.World);
-
     }
 
 }

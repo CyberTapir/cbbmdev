@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class SpawnerBehaviour : MonoBehaviour
 {
-
-    public GameObject obstacle;
-
+    public GameObject obstacle;    
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("CreateObstacle", 0.1f, 0.5f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        InvokeRepeating("CreateObstacle", 0.5f, 1f);
     }
 
     void CreateObstacle()
@@ -25,17 +17,16 @@ public class SpawnerBehaviour : MonoBehaviour
         obstacle.transform.position = new Vector2(Random.Range(0f, 3800f), transform.position.y);
         
         //Speed set to a number between 5 and 10
-        //ObstacleBehaviour obScript = obstacle.GetComponent<ObstacleBehaviour>();
-        //obScript.speed = Random.Range(10f, 15f);
+        ObstacleBehaviour obScript = obstacle.GetComponent<ObstacleBehaviour>();
+        obScript.speed = Random.Range(1000f, 1500f);
 
-        //random size set to between 0.1 and 0.2 (x axis)
-        float size = Random.Range(1f, 1.5f);
-        //random size2 set to between 0.2 and 0.5 (y axis)
-        float size2 = Random.Range(1f, 1.5f);
+        //random x axis size set to between 0.1 and 0.2
+        float size = Random.Range(4.5f, 5f);
+        //random y axis size set to between 0.2 and 0.5
+        float size2 = Random.Range(4.5f, 5f);
         obstacle.transform.localScale = new Vector2(size, size2);
 
         //Create obstacle
         Instantiate(obstacle);
     }
-
 }
