@@ -17,7 +17,7 @@ public class S1PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal") * 600, Input.GetAxis("Vertical") * 600);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal") * 750, Input.GetAxis("Vertical") * 750);
 
     }
     private void OnTriggerEnter2D(Collider2D other)
