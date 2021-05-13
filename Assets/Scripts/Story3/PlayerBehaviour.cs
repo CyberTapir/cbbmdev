@@ -60,7 +60,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             //show the game over screen
 
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             scoreText.text = "Your score was " + score;
             GameOverPopUp.SetActive(true);
         }

@@ -11,6 +11,7 @@ public class ObstacleBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision){
         //When a player collides with obstacle shows in console and sets the game to be over.  
         Debug.Log("Collision with player");
+        PlayerBehaviour.gameOver = true;
     }
 
     // Start is called before the first frame update
