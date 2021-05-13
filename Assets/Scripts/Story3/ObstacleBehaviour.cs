@@ -23,12 +23,15 @@ public class ObstacleBehaviour : MonoBehaviour
     void Update()
     {
         //If the obstacle is past the canvas then destroy it and the gameObject
-        if(transform.position.y < -300){
+        if(transform.position.y < -500){
             Destroy(gameObject);
             Destroy(Obstacle);
+            Debug.Log("Obstacle destroyed");
         }
 
-        //Move the object
-        transform.Translate(speed *-transform.up * Time.deltaTime, transform);
+        else{
+            //Move the object
+            transform.Translate(speed *-transform.up * Time.deltaTime, transform);
+        }
     }
 }

@@ -17,13 +17,10 @@ public class DoorBehaviour : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D()
     {
-        if (other.tag == "Player")
-        {
-            Destroy(gameObject);
-            Debug.Log("Loading new scene");
-            SceneManager.LoadScene("Story2");
-        }
+        Destroy(gameObject);
+        Debug.Log("Loading new scene");
+        SceneManager.LoadScene("Story2");
     }
 }

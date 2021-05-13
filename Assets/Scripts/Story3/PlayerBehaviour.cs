@@ -14,7 +14,6 @@
 // Callum Bennett
 //
 
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,14 +21,21 @@ using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    public static int score = 0;
+    public static bool gameOver = false;
+    public GameObject GameOverPopUp;
+    public Text scoreText;
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
+        //GameOverPopUp is set to false
+        gameOver = false;
+        GameOverPopUp.SetActive(false);
         //sets the Time to 1 second
-        //Time.timeScale = 1;
+        Time.timeScale = 1;
         //Increment score every 1 second
-        //InvokeRepeating("IncrementScore", 1f, 1f);
+        InvokeRepeating("IncrementScore", 1f, 1f);
     }
 
     // Update is called once per frame
@@ -39,6 +45,25 @@ public class PlayerBehaviour : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(speed * h, 0);
         transform.Translate(movement * Time.deltaTime, Space.World);
+        CheckGameOver();
+    }
+
+    void IncrementScore(){
+        //increment the score
+        score++;
+    }
+
+
+    void CheckGameOver()
+    {
+        if(gameOver)
+        {
+            //show the game over screen
+
+            Time.timeScale = 0;
+            scoreText.text = "Your score was " + score;
+            GameOverPopUp.SetActive(true);
+        }
     }
 
 }
