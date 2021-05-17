@@ -59,10 +59,9 @@ public class PlayerBehaviour : MonoBehaviour
         if(gameOver)
         {
             //show the game over screen
-
-            //Time.timeScale = 0;
             scoreText.text = "Your score was " + score;
             GameOverPopUp.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
